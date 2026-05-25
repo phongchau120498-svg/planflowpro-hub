@@ -80,16 +80,16 @@
 
 *Nhìn lại bộ 12 tài liệu ASSP, phễu rất sắc bén, nội dung cực gắt. Nhưng để biến từ Document thành Tiền thực tế, dưới đây là những rào cản lớn nhất của tôi:*
 
-### 1. ĐIỂM YẾU LỚN NHẤT HIỆN TẠI LÀ GÌ?
-Sản phẩm PlanFlowPro bán giá siêu rẻ (149k), nghĩa là **Traffic phải cực lớn** và **Chi phí Ads (CPA) phải cực rẻ** thì mới có lãi (Hoặc phải phụ thuộc vào việc Upsell AI đằng sau). 
-Điểm yếu của tôi là: **Chưa có kinh nghiệm scale Ads cho SaaS Low-ticket**. Tôi mạnh về Branding & Xây kênh Tiktok (Từng làm Moaw Moaws), nhưng việc set up phễu In-App Upsell và chạy quảng cáo chuyển đổi trực tiếp lấy số lượng lớn (Mass) với ngân sách bùng nổ thì tôi chưa tự tin.
+### 1. ĐIỂM YẾU LỚN NHẤT HIỆN TẠI CỦA EM LÀ GÌ?
+Điểm yếu lớn nhất của em hiện tại là **thiếu kinh nghiệm thực chiến để tối ưu luồng trải nghiệm trong App (Product-Led Growth)** và **giải bài toán chi phí hạ tầng AI**.
+Góc Marketing/Branding thì em khá tự tin (từ đợt làm Moaw Moaws), nhưng để thiết kế được một luồng In-App Upsell thật mượt, làm sao để khách dùng phát là "nghiện" và tự động muốn nạp thêm tiền nâng cấp gói, cộng với việc quản lý chi phí khi scale user lên số lượng lớn thì em thật sự chưa tự tin.
 
-### 2. NẾU CÓ THỂ NHỜ NGHĨA / KP3 — TÔI MUỐN ĐƯỢC HỖ TRỢ VỀ:
-✅ **Coaching 1-1 về chiến lược kinh doanh:** Đặc biệt là cách set up chỉ số (Metrics) để đo lường phễu Product-Led Growth (CPA bao nhiêu là hợp lý? Tỉ lệ nâng cấp AI bao nhiêu thì có lãi?).
-✅ **Khoá Pro về [Tối ưu hệ thống Tracking & Email Automation]:** Xây nội dung hay là một chuyện, nhưng nối kỹ thuật (Webhook -> Tag khách hàng -> Gửi Email đúng hành vi) không bị lỗi là điều tôi rất cần chuyên gia chỉ điểm.
-✅ **Cộng đồng cùng level để học hỏi:** Muốn giao lưu với những ai đã chạy SaaS/Low-ticket thành công.
+### 2. EM RẤT MONG ĐƯỢC ANH NGHĨA HỖ TRỢ VỀ:
+✅ **Tối ưu trải nghiệm App (từ thực chiến):** Rất cần góc nhìn và kinh nghiệm thực tế của anh. Làm sao để khách vừa vào app đã thấy "wow", nhận ra giá trị ngay và khao khát mua luôn các gói tiếp theo?
+✅ **Bài toán Scale có lời:** Phân tích giúp em chiến lược scale mô hình. Khi mình vít Ads để nhân rộng (scale mass), làm sao để giữ được dòng tiền khỏe và sinh lời bền vững?
+✅ **Tối ưu chi phí API:** Nhờ anh tư vấn giúp em nên xài API nào, giải pháp ra sao để tối ưu nhất về chi phí vận hành đường dài mà AI vẫn trả kết quả ngon cho khách.
 
-### 3. TRONG 90 NGÀY TỚI — 3 VẤN ĐỀ TÔI SỢ KẸT NHẤT:
-1. **Lỗ chi phí Ads (CPA > 149k):** Nếu chạy Ads mà chi phí ra 1 đơn vượt quá số tiền 149k thu về (và khách không chịu nạp thêm tiền AI), dự án sẽ đứt dòng tiền ở Front-end rất nhanh.
-2. **Khách hàng Churn (Tỷ lệ bỏ cuộc sớm):** Bán được 149k rồi, khách xài thử 3 ngày thấy lạ quá hoặc không quen xài hệ thống AI rồi vứt xó App, dẫn đến không thể Upsell Gói Team và Thẻ AI.
-3. **Kẹt kỹ thuật (Automation vỡ):** Khách thanh toán xong lúc 2h sáng nhưng webhook SePay lỗi, không nhận được tài khoản, dẫn đến bốc phốt và quá tải khâu CSKH bằng cơm.
+### 3. TRONG 90 NGÀY TỚI — 3 VẤN ĐỀ EM SỢ KẸT NHẤT:
+1. **Lỗ chi phí Ads (CPA > 149k):** Nếu chạy Ads mà chi phí ra 1 đơn vượt quá số tiền 149k thu về (và khách không chịu nạp thêm tiền mua AI), dự án sẽ đứt dòng tiền ở mảng Front-end cực kỳ nhanh.
+2. **Khách hàng Churn (Tỷ lệ bỏ cuộc sớm):** Bán được 149k rồi, nhưng lỡ khách xài thử 3 ngày thấy khó hiểu hoặc không quen rồi vứt xó App, thế là mất sạch cơ hội Upsell Gói Team và Thẻ AI.
+3. **Chi phí API AI phình to ngoài tầm kiểm soát:** Vì bán mồi giá rẻ (149k), nếu ngay từ đầu không chọn đúng giải pháp API tối ưu, lúc user tăng đột biến thì chi phí gọi API sẽ thành một gánh nặng khổng lồ đè bẹp lợi nhuận.
