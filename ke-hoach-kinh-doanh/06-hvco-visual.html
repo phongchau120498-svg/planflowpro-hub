@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVCO Visual</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700;900&display=swap');
+        :root {
+            --primary: #000000;
+            --bg: #ffffff;
+            --highlight: #E5FE40;
+        }
+        * { box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); padding: 2rem; color: var(--primary); margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+        .header { grid-column: 1 / -1; text-align: center; margin-bottom: 2rem; }
+        h1 { font-weight: 900; text-transform: uppercase; color: var(--primary); margin-bottom: 0.5rem; font-size: clamp(2rem, 4vw, 2.5rem); letter-spacing: -1px;}
+        h1 span { display: inline-block; background: var(--highlight); padding: 0 10px; transform: skewX(-5deg); color: var(--primary); margin-top: 0.5rem; font-size: clamp(1rem, 2vw, 1.2rem);}
+        
+        .card { 
+            background: #fff; border: 4px solid var(--primary); padding: 2rem;
+            position: relative; box-shadow: 6px 6px 0 var(--primary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover { transform: translate(-4px, -4px); box-shadow: 10px 10px 0 var(--highlight); }
+        
+        .tag { display: inline-block; padding: 6px 12px; font-size: 0.85rem; font-weight: 900; margin-bottom: 1.5rem; text-transform: uppercase; border: 2px solid var(--primary); background: var(--primary); color: var(--highlight); }
+        
+        .comp-title { font-weight: 900; font-size: 1.4rem; margin: 0 0 1rem 0; line-height: 1.4; color: var(--primary); text-transform: uppercase;}
+        .comp-desc { font-size: 1rem; color: var(--primary); margin: 0 0 0.8rem 0; line-height: 1.6; font-weight: 500;}
+        .comp-desc strong { color: var(--primary); font-weight: 900; background: var(--highlight); padding: 0 4px; }
+        .bullets { padding-left: 20px; font-size: 1rem; color: var(--primary); font-weight: 500; margin-top: 0.5rem;}
+        .bullets li { margin-bottom: 0.5rem; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Bản Phác Thảo Mồi Nhử<br><span>(HVCO - High Value Content Offer)</span></h1>
+    </div>
+    
+    <div class="container">
+        <!-- HVCO 1 -->
+        <div class="card">
+            <span class="tag">Góc Nỗi Đau</span>
+            <h3 class="comp-title">7 Lỗi Ngớ Ngẩn Đang Đốt Sạch Thời Gian Làm Việc (#3 Dân Văn Phòng Nào Cũng Mắc)</h3>
+            <p class="comp-desc"><strong>Định dạng:</strong> Checklist / PDF ngắn</p>
+            <p class="comp-desc"><strong>Mục tiêu:</strong> Đánh trúng nỗi sợ lãng phí thời gian và bệnh "nghiện setup Notion" của dân văn phòng.</p>
+            <p class="comp-desc"><strong>Hooks (Mồi câu Ads):</strong></p>
+            <ul class="bullets">
+                <li>Khám phá Lỗi #3 khiến 90% dân VP mất sạch 2 tiếng mỗi sáng.</li>
+                <li>Tại sao cố gắng setup Notion cho đẹp lại là cái bẫy lớn nhất?</li>
+            </ul>
+        </div>
+
+        <!-- HVCO 2 -->
+        <div class="card">
+            <span class="tag">Góc Tò Mò (Case Study)</span>
+            <h3 class="comp-title">Một Ngày Quản Lý Doanh Số 9 Tỷ & 11 Nhân Sự Bằng AI (Từ 8h Sáng Đến 5h Chiều)</h3>
+            <p class="comp-desc"><strong>Định dạng:</strong> Nhật ký công việc / Case Study</p>
+            <p class="comp-desc"><strong>Mục tiêu:</strong> Thu hút các Manager/Leader bị ngộp việc tò mò xem cách người giỏi vận hành thực tế ra sao.</p>
+            <p class="comp-desc"><strong>Hooks (Mồi câu Ads):</strong></p>
+            <ul class="bullets">
+                <li>Nhìn trộm màn hình của Manager 9 tỷ phân bổ công việc.</li>
+                <li>Bí quyết giao việc cho 11 người chỉ trong 5 phút buổi sáng.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
