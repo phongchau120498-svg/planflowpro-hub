@@ -80,16 +80,16 @@
 
 *Nhìn lại bộ 12 tài liệu ASSP, phễu rất sắc bén, nội dung cực gắt. Nhưng để biến từ Document thành Tiền thực tế, dưới đây là những rào cản lớn nhất của tôi:*
 
-### 1. ĐIỂM YẾU LỚN NHẤT HIỆN TẠI CỦA EM LÀ GÌ?
-Điểm yếu lớn nhất của em hiện tại là **thiếu kinh nghiệm thực chiến để tối ưu luồng trải nghiệm trong App (Product-Led Growth)** và **giải bài toán chi phí hạ tầng AI**.
-Góc Marketing/Branding thì em khá tự tin (từ đợt làm Moaw Moaws), nhưng để thiết kế được một luồng In-App Upsell thật mượt, làm sao để khách dùng phát là "nghiện" và tự động muốn nạp thêm tiền nâng cấp gói, cộng với việc quản lý chi phí khi scale user lên số lượng lớn thì em thật sự chưa tự tin.
+### 1. ĐIỂM YẾU LỚN NHẤT HIỆN TẠI LÀ GÌ?
+Điểm yếu lớn nhất của tôi là **thiếu kinh nghiệm thực chiến trong việc tối ưu luồng trải nghiệm App (Product-Led Growth)** và **bài toán chi phí hạ tầng AI**.
+Dù mạnh về Marketing/Branding (đã từng làm Moaw Moaws), nhưng để thiết kế một luồng In-App Upsell mượt mà, khiến khách hàng dùng là "nghiện" và tự động muốn nâng cấp gói tiếp theo, cũng như quản lý được bài toán chi phí khi scale lên số lượng lớn là điều tôi chưa tự tin.
 
-### 2. EM RẤT MONG ĐƯỢC ANH NGHĨA HỖ TRỢ VỀ:
-✅ **Tối ưu trải nghiệm App (từ thực chiến):** Rất cần góc nhìn và kinh nghiệm thực tế của anh. Làm sao để khách vừa vào app đã thấy "wow", nhận ra giá trị ngay và khao khát mua luôn các gói tiếp theo?
-✅ **Bài toán Scale có lời:** Phân tích giúp em chiến lược scale mô hình. Khi mình vít Ads để nhân rộng (scale mass), làm sao để giữ được dòng tiền khỏe và sinh lời bền vững?
-✅ **Tối ưu chi phí API:** Nhờ anh tư vấn giúp em nên xài API nào, giải pháp ra sao để tối ưu nhất về chi phí vận hành đường dài mà AI vẫn trả kết quả ngon cho khách.
+### 2. NẾU CÓ THỂ NHỜ NGHĨA / KP3 — TÔI MUỐN ĐƯỢC HỖ TRỢ VỀ:
+✅ **Tối ưu trải nghiệm App (Thực chiến):** Góc độ kinh nghiệm thực chiến từ anh Nghĩa làm sao để khách hàng trải nghiệm mượt nhất, nhận ra giá trị ngay lập tức và khao khát mua các gói tiếp theo.
+✅ **Bài toán Scale & Lợi nhuận:** Phân tích chiến lược khi scale mô hình. Làm sao để nhân rộng quy mô (Scale mass) mà vẫn kiểm soát được dòng tiền và sinh lời bền vững?
+✅ **Tối ưu chi phí API:** Tư vấn các giải pháp, API nào là tối ưu nhất về mặt chi phí vận hành lâu dài mà vẫn giữ được chất lượng AI tốt cho khách.
 
-### 3. TRONG 90 NGÀY TỚI — 3 VẤN ĐỀ EM SỢ KẸT NHẤT:
-1. **Lỗ chi phí Ads (CPA > 149k):** Nếu chạy Ads mà chi phí ra 1 đơn vượt quá số tiền 149k thu về (và khách không chịu nạp thêm tiền mua AI), dự án sẽ đứt dòng tiền ở mảng Front-end cực kỳ nhanh.
-2. **Khách hàng Churn (Tỷ lệ bỏ cuộc sớm):** Bán được 149k rồi, nhưng lỡ khách xài thử 3 ngày thấy khó hiểu hoặc không quen rồi vứt xó App, thế là mất sạch cơ hội Upsell Gói Team và Thẻ AI.
-3. **Chi phí API AI phình to ngoài tầm kiểm soát:** Vì bán mồi giá rẻ (149k), nếu ngay từ đầu không chọn đúng giải pháp API tối ưu, lúc user tăng đột biến thì chi phí gọi API sẽ thành một gánh nặng khổng lồ đè bẹp lợi nhuận.
+### 3. TRONG 90 NGÀY TỚI — 3 VẤN ĐỀ TÔI SỢ KẸT NHẤT:
+1. **Lỗ chi phí Ads (CPA > 149k):** Nếu chạy Ads mà chi phí ra 1 đơn vượt quá số tiền 149k thu về (và khách không chịu nạp thêm tiền AI), dự án sẽ đứt dòng tiền ở Front-end rất nhanh.
+2. **Khách hàng Churn (Tỷ lệ bỏ cuộc sớm):** Bán được 149k rồi, khách xài thử 3 ngày thấy lạ quá hoặc không quen xài hệ thống AI rồi vứt xó App, dẫn đến không thể Upsell Gói Team và Thẻ AI.
+3. **Chi phí API AI vượt kiểm soát:** Nếu không chọn đúng giải pháp API tối ưu từ đầu, việc bán phễu giá rẻ (149k) sẽ tạo gánh nặng lớn về chi phí gọi API khi lượng người dùng tăng đột biến.

@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PlanFlowPro - Business Plan Hub</title>
-
-    <!-- Marked.js for parsing Markdown -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
+    <title>PlanFlowPro - Hệ Thống Kỷ Luật Thép</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
         :root {
             --primary: #000000;
@@ -23,318 +19,245 @@
 
         * {
             box-sizing: border-box;
-            margin: 0;
-            padding: 0;
         }
 
         body {
             font-family: 'Inter', -apple-system, sans-serif;
-            background-color: var(--bg);
             color: var(--text);
+            background-color: var(--bg);
             line-height: 1.6;
-            padding-bottom: 5rem;
+            margin: 0;
+            padding: 0;
             -webkit-font-smoothing: antialiased;
         }
 
-        header {
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--primary);
+            letter-spacing: -0.03em;
+            margin: 0;
+        }
+
+        .mega-text {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.05;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.04em;
+        }
+
+        .highlight {
+            background-color: var(--highlight);
+            color: var(--primary);
+            padding: 0 0.2em;
+            display: inline-block;
+            transform: skewX(-3deg);
+        }
+
+        .highlight-dark {
             background-color: var(--primary);
             color: white;
-            padding: 5rem 2rem;
+            padding: 0 0.2em;
+            display: inline-block;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: -0.02em;
+            margin-bottom: 2rem;
+            color: var(--primary);
+        }
+
+        .dimmed {
+            color: var(--dimmed);
+            font-weight: 400;
+        }
+
+        .text-center {
             text-align: center;
-            border-bottom: 5px solid var(--highlight);
         }
 
-        h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-
-        h1 span {
-            color: var(--primary);
-            background: var(--highlight);
-            padding: 0 10px;
-            transform: skewX(-5deg);
-            display: inline-block;
-        }
-
-        .subtitle {
-            color: #cccccc;
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            font-weight: 900;
-            color: var(--primary);
-            margin: 4rem 0 1.5rem;
-            text-transform: uppercase;
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 0.5rem;
-            display: inline-block;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .card {
-            background-color: white;
-            border: 2px solid var(--primary);
-            border-radius: 12px;
-            padding: 1.5rem;
-            transition: all 0.2s;
+        /* Cover Page */
+        .cover {
             display: flex;
             flex-direction: column;
-            box-shadow: 6px 6px 0px var(--border);
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: var(--primary);
+            color: white;
+            padding: 5rem 1.5rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 8px 8px 0px var(--highlight);
-            border-color: var(--primary);
+        .cover h1 {
+            color: white;
+            position: relative;
+            z-index: 2;
         }
 
-        .card-tag {
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: var(--primary);
-            background: var(--highlight);
-            padding: 4px 10px;
-            border-radius: 100px;
-            align-self: flex-start;
-            margin-bottom: 1rem;
-            border: 1px solid var(--primary);
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary);
-            font-weight: 800;
-        }
-
-        .card p {
-            color: var(--dimmed);
-            font-size: 0.95rem;
-            flex-grow: 1;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .btn {
-            display: inline-block;
-            background: white;
-            color: var(--primary);
-            text-decoration: none;
-            padding: 0.8rem 1.2rem;
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--highlight);
+            padding: 0.5rem 1rem;
             border-radius: 100px;
             font-size: 0.9rem;
             font-weight: 800;
-            text-align: center;
-            border: 2px solid var(--primary);
-            transition: all 0.2s;
-            cursor: pointer;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #cccccc;
+            max-width: 650px;
+            margin-top: 1.5rem;
+            line-height: 1.5;
+        }
+
+        /* Content Pages */
+        .content {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        .chapter-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            border-top: 4px solid var(--primary);
+            padding-top: 2rem;
+            margin-top: 4rem;
             text-transform: uppercase;
         }
 
-        .btn:hover {
-            background: var(--primary);
+        p {
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Pain Boxes */
+        .pain-box {
+            background-color: var(--primary);
             color: white;
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            transform: rotate(-1deg);
+            box-shadow: 10px 10px 0px var(--highlight);
         }
 
-        .btn-primary {
-            background: var(--primary);
+        .pain-box h3 {
             color: var(--highlight);
+            margin-top: 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        .btn-primary:hover {
-            background: var(--highlight);
-            color: var(--primary);
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        /* Modal Styles */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-            backdrop-filter: blur(5px);
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--bg);
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
-            border-radius: 16px;
-            border: 4px solid var(--primary);
-            box-shadow: 15px 15px 0px var(--highlight);
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            animation: slideUp 0.3s ease-out;
-        }
-
-        @keyframes slideUp {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .modal-header {
-            padding: 1.5rem;
-            border-bottom: 2px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--primary);
-            color: white;
-            border-radius: 12px 12px 0 0;
-        }
-
-        .modal-header h2 {
-            margin: 0;
-            font-size: 1.2rem;
-            color: var(--highlight);
+        .pain-box .huge-pain {
+            font-size: 1.8rem;
             font-weight: 800;
-        }
-
-        .close-btn {
-            background: none;
-            border: none;
+            line-height: 1.3;
+            margin-bottom: 1.5rem;
             color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            line-height: 1;
         }
 
-        .close-btn:hover {
-            color: var(--highlight);
-        }
-
-        .modal-body {
-            padding: 2rem;
-            overflow-y: auto;
+        .pain-box p {
+            color: #dddddd;
             font-size: 1.1rem;
         }
 
-        /* Markdown Styles inside Modal */
-        .modal-body h1,
-        .modal-body h2,
-        .modal-body h3 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .modal-body h1 {
-            font-size: 2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            border-bottom: 3px solid var(--highlight);
-            display: inline-block;
-        }
-
-        .modal-body h2 {
-            font-size: 1.5rem;
-            border-left: 5px solid var(--primary);
-            padding-left: 10px;
-        }
-
-        .modal-body p {
-            margin-bottom: 1.2rem;
-        }
-
-        .modal-body ul,
-        .modal-body ol {
-            margin-bottom: 1.2rem;
-            padding-left: 2rem;
-        }
-
-        .modal-body li {
-            margin-bottom: 0.5rem;
-        }
-
-        .modal-body blockquote {
-            border-left: 4px solid var(--highlight);
-            padding-left: 1rem;
-            color: var(--dimmed);
-            font-style: italic;
-            background: #f8fafc;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-
-        .modal-body hr {
-            border: none;
-            border-top: 2px dashed var(--border);
+        .takeaway-list {
             margin: 2rem 0;
+            padding-left: 0;
+            list-style: none;
         }
 
-        .modal-body code {
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: monospace;
-            color: #ef4444;
+        .takeaway-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.15rem;
+            font-weight: 500;
         }
 
-        /* Loading Spinner */
-        .loader {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid var(--primary);
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 2rem auto;
-            display: none;
+        .takeaway-list li::before {
+            content: '👉';
+            position: absolute;
+            left: 0;
+            top: 2px;
         }
 
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
+        /* Call To Action */
+        .cta-box {
+            background: var(--bg);
+            border: 4px solid var(--primary);
+            padding: 4rem 2rem;
+            border-radius: 24px;
+            margin-top: 4rem;
+            text-align: center;
+            box-shadow: 12px 12px 0px var(--primary);
+            position: relative;
+        }
+
+        .cta-box::before {
+            content: 'GIỚI HẠN 100 SLOT';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ef4444;
+            /* Red for urgency */
+            color: white;
+            padding: 5px 15px;
+            border-radius: 100px;
+            font-weight: 900;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .cta-btn {
+            background: var(--primary);
+            color: var(--highlight);
+            padding: 1.2rem 3rem;
+            text-decoration: none;
+            font-weight: 900;
+            border-radius: 100px;
+            font-size: 1.3rem;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 2.5rem 1.2rem;
             }
 
-            100% {
-                transform: rotate(360deg);
+            .pain-box {
+                padding: 2rem 1.5rem;
+                transform: none;
+                box-shadow: 6px 6px 0px var(--highlight);
             }
         }
     </style>
@@ -342,187 +265,178 @@
 
 <body>
 
-    <header>
-        <div class="badge"
-            style="background: rgba(255,255,255,0.1); display: inline-block; padding: 5px 15px; border-radius: 100px; border: 1px solid rgba(255,255,255,0.2); margin-bottom: 1.5rem; font-weight: 800; font-size: 0.9rem; color: var(--highlight);">
-            DEMO DAY PRESENTATION</div>
-        <h1>PlanFlowPro <span>Hub</span></h1>
-        <p class="subtitle">Hệ thống Kế hoạch Kinh doanh & Phễu Marketing tự động</p>
-    </header>
+    <!-- Hero Section -->
+    <div class="cover">
+        <div class="badge">PHIÊN BẢN CHÍNH THỨC 2026</div>
+        <h1 class="mega-text">ĐỪNG ĐỂ BUỔI TỐI CỦA BẠN BỊ CHÔN VÙI VÀO <span class="highlight"
+                style="color: black;">DEADLINE</span></h1>
+        <div class="subtitle">Đã đến lúc đập bỏ những ứng dụng rườm rà. Ép bản thân vào kỷ luật thép với Hệ thống quản
+            lý tối giản nhất hành tinh.</div>
+    </div>
 
-    <div class="container">
+    <div class="content">
+        <!-- Villain Story -->
+        <h2 class="chapter-title">NHÌN THẲNG VÀO THỰC TẾ ĐI! TẠI SAO BẠN HAY TRỄ DEADLINE?</h2>
 
-        <h2 class="section-title">1. Chiến Lược Lõi (Core Strategy)</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-tag">Agent 00</div>
-                <h3>Business Context</h3>
-                <p>Bối cảnh kinh doanh, lợi thế cạnh tranh và định vị sản phẩm PlanFlowPro 149k.</p>
-                <button class="btn md-link" data-url="00-business-context.md">Đọc tài liệu</button>
-            </div>
-            <div class="card">
-                <div class="card-tag">Agent 01 & 02</div>
-                <h3>Avatar & Brand Voice</h3>
-                <p>Chân dung dân văn phòng "nỗ lực ảo" & Văn phong xéo xắt của Ngỗng Đại Ca.</p>
-                <div class="btn-group">
-                    <button class="btn md-link" data-url="01-avatar.md" style="flex:1">Avatar</button>
-                    <button class="btn md-link" data-url="02-brand-voice.md" style="flex:1">Voice</button>
+        <p class="lead">Làm việc 8 tiếng quần quật trên công ty, tối về nhà vẫn mở lap lên làm tiếp. Nhưng cuối tuần
+            nhìn lại, bạn thấy mình chưa làm được cái gì ra hồn.</p>
+
+        <p>Bởi vì bạn đang mắc căn bệnh <span class="highlight-dark">"Nghiện Setup, Lười Thực Thi"</span>. Và sự Nỗ Lực
+            Ảo.</p>
+
+        <p>Bạn cúng tiền mua Notion Pro, Trello Premium. Bạn dành 3 đêm liền để tô màu, kẻ bảng, phân loại thẻ task.
+            Nhìn rất đẹp mắt, rất chill... Cho đến khi bạn nhận ra: <strong>Việc setup cái app còn tốn thời gian hơn cả
+                việc bắt tay vào làm cái task đó!</strong></p>
+
+        <div class="pain-box">
+            <h3>SỰ THẬT ĐAU LÒNG:</h3>
+            <p class="huge-pain">Làm đêm không phải vì bạn chăm chỉ. Mà vì ban ngày bạn xếp việc quá dở.</p>
+            <p>Bạn bơi trong mớ công việc lặp đi lặp lại, không biết cái nào quan trọng hơn. Hệ thống làm việc của bạn
+                rò rỉ quá nhiều "thời gian rỗng".</p>
+        </div>
+
+        <!-- Origin Story -->
+        <h2 class="chapter-title">TÔI ĐÃ TỪNG NHƯ THẾ. CHO ĐẾN KHI...</h2>
+
+        <p>Tôi là Phong - Đang vận hành doanh số 9 Tỷ/tháng và quản lý trực tiếp 11 nhân sự.</p>
+        <p>Trước đây, tôi cũng từng chìm nghỉm trong mớ tool xịn xò nhưng hoàn toàn vô dụng đó. Đến một ngày, tôi quyết
+            định đập bỏ tất cả. Tôi tạo ra một công cụ không có sự hào nhoáng, chỉ có <strong>SỰ KỶ LUẬT TÀN
+                NHẪN.</strong></p>
+
+        <p class="lead" style="margin-top: 2rem; font-size: 2rem;">Chào mừng đến với PlanFlowPro.</p>
+
+        <p>Không màu mè. Không biểu đồ lằng nhằng. Nó sinh ra chỉ làm đúng 2 việc:</p>
+        <ul class="takeaway-list">
+            <li><strong>Nhận lệnh siêu tốc:</strong> Gõ Chat hoặc đọc Voice trong 5 giây. Tag ngay tên nhân sự, AI sẽ tự
+                động tách và giao việc.</li>
+            <li><strong>Ép bạn vào kỷ luật:</strong> Làm trễ thì AI "Ngỗng Đại Ca" sẽ móc mỉa. Làm xong thì pháo hoa nổ
+                ngợp trời (Bơm Dopamine thẳng vào não).</li>
+        </ul>
+
+        <!-- Author Section (Restored from Guide) -->
+        <div class="author-section"
+            style="margin: 4rem 0 3rem; background: #fafafa; border: 4px solid var(--primary); border-radius: 20px; padding: 3rem 2rem; position: relative; box-shadow: 8px 8px 0px var(--primary);">
+            <div
+                style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--highlight); color: var(--primary); padding: 5px 20px; border-radius: 100px; font-weight: 900; font-size: 0.9rem; border: 2px solid var(--primary); letter-spacing: 1px;">
+                NGƯỜI ĐỨNG SAU HỆ THỐNG</div>
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <div
+                    style="width: 120px; height: 120px; border-radius: 50%; border: 4px solid var(--primary); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; box-shadow: 4px 4px 0px #ccc; overflow: hidden; background: #fff;">
+                    <img src="public/avatar-phong.jpg" alt="Châu Thanh Phong"
+                        style="width: 100%; height: 100%; object-fit: cover;"
+                        onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Châu+Thanh+Phong&background=000&color=E5FE40&size=200&bold=true';">
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-tag">Agent 03</div>
-                <h3>Hero Mechanism</h3>
-                <p>Quy trình "Ăn Con Ếch" và phương pháp dọn dẹp não bộ khác biệt bằng Voice/Chat.</p>
-                <button class="btn md-link" data-url="03-hero-mechanism.md">Đọc tài liệu</button>
+                <h3
+                    style="margin: 0; font-size: 2rem; text-transform: uppercase; font-weight: 900; letter-spacing: -1px;">
+                    Châu Thanh Phong</h3>
+                <h4 style="margin: 0.5rem 0 1rem; color: var(--text); font-weight: 700; font-size: 1.2rem;">Brand
+                    Manager @ Moaw Moaws</h4>
+                <p style="margin-bottom: 1.5rem; font-weight: 500; color: var(--dimmed);">Thương hiệu dầu dưỡng chăm sóc
+                    body Top 1 TikTok</p>
+
+                <ul
+                    style="text-align: left; max-width: 600px; margin: 0 auto; list-style-type: none; padding: 0; background: white; padding: 1.5rem; border-radius: 12px; border: 2px dashed #ccc;">
+                    <li style="margin-bottom: 1rem; display: flex; align-items: flex-start;"><span
+                            style="color: var(--primary); margin-right: 12px; font-weight: 900;">✓</span> <span
+                            style="font-weight: 500; line-height: 1.5;">Kinh nghiệm thực chiến trong việc
+                            <strong>training và quản lý nhân sự</strong>, thiết lập quy trình để đội ngũ làm việc tự
+                            động hoá.</span></li>
+                    <li style="display: flex; align-items: flex-start;"><span
+                            style="color: var(--primary); margin-right: 12px; font-weight: 900;">✓</span> <span
+                            style="font-weight: 500; line-height: 1.5;">Chuyên gia <strong>training và tối ưu hiệu suất
+                                công việc</strong> (Productivity Optimization) cho các Doanh nghiệp SMEs.</span></li>
+                </ul>
             </div>
         </div>
 
-        <h2 class="section-title">2. Phễu & Sản Phẩm (Funnel & Offer)</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-tag">Agent 04 & 05</div>
-                <h3>Money Model & Offer</h3>
-                <p>Cấu trúc giá 149k, chiến lược In-App Upsell (Thêm người 79k, Mua AI).</p>
-                <div class="btn-group">
-                    <button class="btn md-link" data-url="04-money-model.md" style="flex:1">Money Model</button>
-                    <button class="btn md-link" data-url="05-offer.md" style="flex:1">Offer 149k</button>
+        <!-- Social Proof (Hạ Case Study) -->
+        <div
+            style="background: #f8fafc; border: 2px dashed #cbd5e1; padding: 2rem; border-radius: 16px; margin: 3rem 0;">
+            <h3 style="margin-top:0; font-size: 1.2rem; text-transform: uppercase;">Nhân chứng thực tế:</h3>
+            <p style="font-style: italic; color: #475569;">"Trước đây tối nào em cũng phải OT làm đêm, lúc nào cũng
+                overload. Từ lúc áp dụng quy trình 'Ăn con ếch' và dùng Chat/Voice AI để lên task, tag việc cực nhanh,
+                em tiết kiệm được 50% thời gian rỗng. Bây giờ 5h chiều là tắt máy đi về, hết sạch stress!"</p>
+            <p style="margin-bottom:0; font-weight: 800;">- Bé Hạ (Team Marketing)</p>
+        </div>
+
+        <!-- Trust Section (Restored from Guide) -->
+        <div class="trust-section" style="margin-bottom: 4rem; text-align: center;">
+            <h2
+                style="font-size: 2rem; font-weight: 900; text-transform: uppercase; margin-bottom: 2rem; letter-spacing: -1px;">
+                BẠN KHÔNG CÓ RỦI RO NÀO CẢ</h2>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap;">
+                <div
+                    style="flex: 1; min-width: 200px; padding: 1.5rem; border: 2px solid var(--border); border-radius: 16px; background: white;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🛡️</div>
+                    <h4 style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.1rem; text-transform: uppercase;">ĐẢM
+                        BẢO HIỆU QUẢ</h4>
+                    <p style="font-size: 0.95rem; color: var(--dimmed); margin: 0; font-weight: 500; line-height: 1.5;">
+                        Cam kết hoàn tiền 100% trong 14 ngày nếu bạn không thấy năng suất tăng lên.</p>
                 </div>
-                <div class="btn-group" style="margin-top: 10px;">
-                    <a href="04-money-model-visual.html" target="_blank" class="btn btn-primary" style="flex:1">Sơ đồ
-                        Tiền</a>
-                    <a href="05-offer-visual.html" target="_blank" class="btn btn-primary" style="flex:1">Sơ đồ Gói</a>
+                <div
+                    style="flex: 1; min-width: 200px; padding: 1.5rem; border: 2px solid var(--border); border-radius: 16px; background: white;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+                    <h4 style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.1rem; text-transform: uppercase;">BẢO
+                        MẬT DỮ LIỆU</h4>
+                    <p style="font-size: 0.95rem; color: var(--dimmed); margin: 0; font-weight: 500; line-height: 1.5;">
+                        Mọi công việc, ý tưởng của bạn được lưu trữ an toàn. Không ai khác có thể truy cập.</p>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-tag">Agent 06</div>
-                <h3>Lead Magnet (HVCO)</h3>
-                <p>Mồi nhử: "Template 1-Click" ép dùng app trị bệnh nghiện sưu tầm file.</p>
-                <a href="06-hvco-visual.html" target="_blank" class="btn btn-primary">Xem sơ đồ Mồi Nhử</a>
-            </div>
-            <div class="card">
-                <div class="card-tag">Agent 07</div>
-                <h3>Funnel Blueprint</h3>
-                <p>Bản đồ phễu chuyển đổi từ đầu vào (Ads) đến In-App Upsell cuối cùng.</p>
-                <div class="btn-group">
-                    <button class="btn md-link" data-url="07-funnel-blueprint.md" style="flex:1">Đọc Chiến lược</button>
-                    <a href="07-funnel-visual.html" target="_blank" class="btn btn-primary" style="flex:1">Sơ đồ
-                        Phễu</a>
+                <div
+                    style="flex: 1; min-width: 200px; padding: 1.5rem; border: 2px solid var(--border); border-radius: 16px; background: white;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+                    <h4 style="margin: 0 0 0.5rem; font-weight: 800; font-size: 1.1rem; text-transform: uppercase;">TRUY
+                        CẬP TỨC THÌ</h4>
+                    <p style="font-size: 0.95rem; color: var(--dimmed); margin: 0; font-weight: 500; line-height: 1.5;">
+                        Xử lý thanh toán tự động 24/7. Nhận tài khoản đăng nhập ngay trong 3 giây.</p>
                 </div>
             </div>
         </div>
 
-        <h2 class="section-title">3. Trạm Chuyển Đổi (Copywriting)</h2>
-        <div class="grid">
-            <div class="card" style="border-color: var(--highlight); background: #fafafa;">
-                <div class="card-tag" style="background: var(--primary); color: var(--highlight);">HOT ASSET</div>
-                <h3>Landing Page (Live)</h3>
-                <p>Trang bán hàng 149k chính thức được đúc kết từ công thức đau điếng của ASSP.</p>
-                <a href="../" target="_blank" class="btn btn-primary"
-                    style="border-color: var(--primary); background: var(--highlight); color: var(--primary);">MỞ TRANG
-                    BÁN HÀNG</a>
+        <!-- The Offer -->
+        <div class="pain-box" id="pricing"
+            style="background-color: var(--primary); color: white; border-radius: 20px; padding: 2.5rem; position: relative; margin-bottom: 4rem;">
+            <div
+                style="position: absolute; top: -15px; left: 20px; background: var(--highlight); color: var(--primary); padding: 5px 15px; border-radius: 100px; font-weight: 900; font-size: 0.9rem; border: 2px solid var(--primary);">
+                THE GODFATHER OFFER</div>
+
+            <h2 style="color: white; margin-top: 1rem; font-size: 2.4rem; margin-bottom: 0.5rem;">PlanFlowPro <span
+                    style="font-size: 1.1rem; background: var(--highlight); color: var(--primary); padding: 4px 10px; border-radius: 8px; vertical-align: middle; margin-left: 10px; font-weight: 800;">TRỌN
+                    ĐỜI</span></h2>
+            <p style="font-size: 1.1rem; color: #ccc; margin-bottom: 1.5rem; line-height: 1.5;">Bạn không cần bỏ ra 300k
+                mỗi tháng để cúng tiền cho các app quản lý nữa.</p>
+
+            <div style="font-size: 3.5rem; font-weight: 900; color: var(--highlight); margin-bottom: 1rem;">149.000₫
             </div>
-            <div class="card">
-                <div class="card-tag">Agent 08</div>
-                <h3>Ads Copy & Opt-in</h3>
-                <p>Kho 18 tiêu đề bốc phốt sự lười biếng và kịch bản quảng cáo Facebook/TikTok.</p>
-                <div class="btn-group">
-                    <button class="btn md-link" data-url="08-ads-copy.md" style="flex:1">Ads Copy</button>
-                    <button class="btn md-link" data-url="08-optin-page.md" style="flex:1">Trang Opt-in</button>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-tag">Agent 10 & 11 & 12</div>
-                <h3>Hệ thống Chăm Sóc Khách</h3>
-                <p>Chuỗi 5 Email bám đuổi + 3 Email lạnh + Kịch bản Chat Support (thay Sales Call).</p>
-                <div class="btn-group" style="margin-bottom: 10px;">
-                    <button class="btn md-link" data-url="10-email-sequence.md" style="flex:1">Nurture (5)</button>
-                    <button class="btn md-link" data-url="11-follow-up.md" style="flex:1">Lạnh (3)</button>
-                </div>
-                <button class="btn md-link" data-url="12-sales-script.md" style="width: 100%;">Kịch bản Chat
-                    Support</button>
+            <p style="color: #94a3b8; margin-bottom: 2rem; font-style: italic;">*Chỉ trả đúng 1 lần. Cập nhật miễn phí
+                mãi mãi.*</p>
+
+            <div style="margin-bottom: 2rem; background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 12px;">
+                <p style="font-weight: 900; font-size: 1.1rem; margin-bottom: 1rem; color: var(--highlight);">🎁 QUÀ
+                    TẶNG KÍCH THÍCH (Chỉ dành cho 100 vé đầu):</p>
+                <ul style="list-style: none; padding-left: 0; margin: 0; line-height: 1.8; font-size: 1.05rem;">
+                    <li style="margin-bottom: 0.8rem;">👉 <strong>MIỄN PHÍ 2 Slot Nhân Sự:</strong> Lôi ngay 2 đồng
+                        nghiệp vào app "kỷ luật" chung. Lính làm xong, máy sếp nổ pháo hoa.</li>
+                    <li style="margin-bottom: 0.8rem;">👉 <strong>Tặng 10 lượt AI Assistant:</strong> Dùng thử Ngỗng Đại
+                        Ca (Chat & Voice) miễn phí. Hết lượt thích thì nạp, không thì vẫn xài app mượt mà.</li>
+                    <li>👉 <strong>Ebook SOP:</strong> Bí quyết làm việc 4 giờ/ngày.</li>
+                </ul>
             </div>
         </div>
 
-        <h2 class="section-title">4. Thực Thi (Execution)</h2>
-        <div class="grid">
-            <div class="card" style="grid-column: 1 / -1; background: var(--primary); border-color: var(--highlight);">
-                <div class="card-tag" style="background: white;">Final Step</div>
-                <h3 style="font-size: 1.8rem; color: white;">Roadmap 90 Ngày & Yêu cầu Hỗ trợ</h3>
-                <p style="font-size: 1.1rem; max-width: 800px; color: #ccc;">Bản kế hoạch hành động 3 tháng sắp tới: Kéo
-                    Traffic -> Validate -> In-App Upsell. Đi kèm những rào cản lớn nhất và lời yêu cầu hỗ trợ cực kỳ
-                    thẳng thắn từ đội ngũ chuyên gia.</p>
-                <button class="btn md-link" data-url="13-roadmap-asks.md"
-                    style="align-self: flex-start; padding: 1rem 2rem; font-size: 1.1rem; background: var(--highlight); color: var(--primary); border: none;">MỞ
-                    BẢN ĐỒ THỰC THI</button>
-            </div>
+        <!-- CTA -->
+        <div class="cta-box">
+            <h2>BẠN DÁM ĐỐI MẶT VỚI<br><span class="highlight">KỶ LUẬT</span> CHƯA?</h2>
+            <p>PlanFlowPro không bán cho bạn thêm một "công cụ trống rỗng" nào nữa. Chúng tôi bán cho bạn <strong>Sự Kỷ
+                    Luật</strong> và <strong>Kết Quả Thực Tế</strong>.</p>
+            <a href="checkout.html" class="cta-btn">👉 ĐĂNG KÝ MUA NGAY (149K)</a>
+        </div>
+
+        <div style="text-align: center; margin-top: 4rem; color: #888; font-size: 0.9rem; font-weight: 500;">
+            © 2026 PlanFlowPro
         </div>
 
     </div>
 
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="mdModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="modalTitle">Loading...</h2>
-                <button class="close-btn" id="closeModal">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="loader" id="loader"></div>
-                <div id="modalContent"></div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const modal = document.getElementById('mdModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalContent = document.getElementById('modalContent');
-        const loader = document.getElementById('loader');
-        const closeBtn = document.getElementById('closeModal');
-
-        // Close modal when clicking X
-        closeBtn.onclick = () => {
-            modal.classList.remove('active');
-        }
-
-        // Close modal when clicking outside
-        window.onclick = (event) => {
-            if (event.target == modal) {
-                modal.classList.remove('active');
-            }
-        }
-
-        // Handle clicking on Markdown links
-        document.querySelectorAll('.md-link').forEach(btn => {
-            btn.addEventListener('click', function (e) {
-                e.preventDefault();
-                const url = this.getAttribute('data-url');
-
-                // Open modal and show loader
-                modal.classList.add('active');
-                modalTitle.textContent = url;
-                modalContent.innerHTML = '';
-                loader.style.display = 'block';
-
-                // Fetch markdown file
-                fetch(url)
-                    .then(response => {
-                        if (!response.ok) throw new Error('Không tìm thấy file ' + url);
-                        return response.text();
-                    })
-                    .then(markdown => {
-                        loader.style.display = 'none';
-                        // Parse markdown to HTML using marked.js
-                        modalContent.innerHTML = marked.parse(markdown);
-                    })
-                    .catch(error => {
-                        loader.style.display = 'none';
-                        modalContent.innerHTML = `<p style="color:red; font-weight:bold;">Lỗi: ${error.message}</p>
-                                                  <p>Bạn cần chạy file HTML này qua một Local Server (như Live Server) để trình duyệt cho phép đọc file cục bộ.</p>`;
-                    });
-            });
-        });
-    </script>
 </body>
 
 </html>
